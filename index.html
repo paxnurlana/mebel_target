@@ -135,6 +135,8 @@ src="https://www.facebook.com/tr?id=3165355223656540&ev=PageView&noscript=1"
     gap: 12px;
     margin-top: 26px;
   }
+  .btn-row-single { justify-content: flex-start; }
+  .btn-row-single .btn-back { padding: 14px 22px; }
   .btn-next {
     flex: 1; padding: 16px;
     border-radius: 999px; border: none;
@@ -184,10 +186,10 @@ src="https://www.facebook.com/tr?id=3165355223656540&ev=PageView&noscript=1"
   }
   .field-error.show { display: block; }
   .form-group input::placeholder { color: #BCBCBC; }
-  .result-header { text-align: center; margin-bottom: 28px; }
+  .result-header { text-align: center; margin-bottom: 16px; }
   .result-done-icon {
-    width: 72px; height: 72px;
-    margin: 0 auto 18px;
+    width: 52px; height: 52px;
+    margin: 0 auto 10px;
     background: linear-gradient(135deg, #4CAF50, #2E7D32);
     border-radius: 50%;
     display: flex;
@@ -196,23 +198,23 @@ src="https://www.facebook.com/tr?id=3165355223656540&ev=PageView&noscript=1"
     box-shadow: 0 8px 24px -4px rgba(76,175,80,0.4);
   }
   .result-done-icon svg {
-    width: 36px; height: 36px;
+    width: 26px; height: 26px;
     stroke: #fff;
     stroke-width: 3;
     fill: none;
     stroke-linecap: round;
     stroke-linejoin: round;
   }
-  .result-header h2 { margin-bottom: 10px; }
+  .result-header h2 { margin-bottom: 0; font-size: 19px; }
   .result-header p { font-size: 15px; color: #6B6D76; line-height: 1.55; }
   .result-diagnosis {
     background: #181C26; border-radius: 16px;
-    padding: 24px; margin-bottom: 24px;
+    padding: 18px 20px; margin-bottom: 16px;
   }
   .diag-label {
     font-size: 11.5px; font-weight: 700;
     letter-spacing: 0.1em; text-transform: uppercase;
-    color: #B6FF3C; margin-bottom: 10px; display: block;
+    color: #B6FF3C; margin-bottom: 8px; display: block;
   }
   .diag-text { font-size: 15px; color: #C9CEDA; line-height: 1.6; }
   .diag-text b { color: #fff; }
@@ -506,7 +508,7 @@ src="https://www.facebook.com/tr?id=3165355223656540&ev=PageView&noscript=1"
 
   <!-- ВОПРОС 1 -->
   <div class="card active" id="step-1">
-    <div class="step-eyebrow">Вопрос 1 из 7</div>
+    <div class="step-eyebrow">Вопрос 1 из 6</div>
     <h2>Запускали ли вы рекламу для мебельного бизнеса раньше?</h2>
     <div class="options" data-step="1">
       <div class="option" data-value="Запускал, но результата почти не было">
@@ -525,15 +527,14 @@ src="https://www.facebook.com/tr?id=3165355223656540&ev=PageView&noscript=1"
         <div class="opt-check"></div>
       </div>
     </div>
-    <div class="btn-row">
-      <button class="btn-back" onclick="prevStep(1)">← Назад</button>
-      <button class="btn-next" id="btn-1" disabled onclick="nextStep(1)">Далее →</button>
+    <div class="btn-row btn-row-single">
+      <button class="btn-back" id="back-1" style="visibility:hidden;" onclick="prevStep(1)">← Назад</button>
     </div>
   </div>
 
   <!-- ВОПРОС 2 -->
   <div class="card" id="step-2">
-    <div class="step-eyebrow">Вопрос 2 из 7</div>
+    <div class="step-eyebrow">Вопрос 2 из 6</div>
     <h2>Какая главная проблема с рекламой прямо сейчас?</h2>
     <div class="options" data-step="2">
       <div class="option" data-value="Заявок мало, реклама работает плохо">
@@ -546,19 +547,9 @@ src="https://www.facebook.com/tr?id=3165355223656540&ev=PageView&noscript=1"
         <div class="opt-text">Заявки есть, но приходят неплатёжеспособные, проблемные клиенты</div>
         <div class="opt-check"></div>
       </div>
-      <div class="option" data-value="Таргетолог есть, но результат плохой">
-        <div class="opt-icon">😕</div>
-        <div class="opt-text">Таргетолог есть, но результат плохой</div>
-        <div class="opt-check"></div>
-      </div>
       <div class="option" data-value="Продажи нестабильные — то густо, то пусто">
         <div class="opt-icon">📉</div>
         <div class="opt-text">Продажи нестабильные — то густо, то пусто</div>
-        <div class="opt-check"></div>
-      </div>
-      <div class="option" data-value="Не знаю, где искать клиентов">
-        <div class="opt-icon">🤔</div>
-        <div class="opt-text">Не знаю, где искать клиентов</div>
         <div class="opt-check"></div>
       </div>
       <div class="option" data-value="Хочу масштабироваться, но не знаю как">
@@ -567,49 +558,16 @@ src="https://www.facebook.com/tr?id=3165355223656540&ev=PageView&noscript=1"
         <div class="opt-check"></div>
       </div>
     </div>
-    <div class="btn-row">
+    <div class="btn-row btn-row-single">
       <button class="btn-back" onclick="prevStep(2)">← Назад</button>
-      <button class="btn-next" id="btn-2" disabled onclick="nextStep(2)">Далее →</button>
     </div>
   </div>
 
-  <!-- ВОПРОС 3 -->
+  <!-- ВОПРОС 3 — ОБОРОТ -->
   <div class="card" id="step-3">
-    <div class="step-eyebrow">Вопрос 3 из 7</div>
-    <h2>Сколько заказов у вас в месяц сейчас?</h2>
-    <div class="options" data-step="3">
-      <div class="option" data-value="До 10 заказов">
-        <div class="opt-icon">🌱</div>
-        <div class="opt-text">До 10 заказов</div>
-        <div class="opt-check"></div>
-      </div>
-      <div class="option" data-value="10–30 заказов">
-        <div class="opt-icon">📦</div>
-        <div class="opt-text">10–30 заказов</div>
-        <div class="opt-check"></div>
-      </div>
-      <div class="option" data-value="30–60 заказов">
-        <div class="opt-icon">📈</div>
-        <div class="opt-text">30–60 заказов</div>
-        <div class="opt-check"></div>
-      </div>
-      <div class="option" data-value="Больше 60 заказов">
-        <div class="opt-icon">⚡</div>
-        <div class="opt-text">Больше 60 заказов</div>
-        <div class="opt-check"></div>
-      </div>
-    </div>
-    <div class="btn-row">
-      <button class="btn-back" onclick="prevStep(3)">← Назад</button>
-      <button class="btn-next" id="btn-3" disabled onclick="nextStep(3)">Далее →</button>
-    </div>
-  </div>
-
-  <!-- ВОПРОС 4 -->
-  <div class="card" id="step-4">
-    <div class="step-eyebrow">Вопрос 4 из 7</div>
+    <div class="step-eyebrow">Вопрос 3 из 6</div>
     <h2>Какой у вас примерный оборот в месяц (общая выручка, до вычета расходов)?</h2>
-    <div class="options" data-step="4">
+    <div class="options" data-step="3">
       <div class="option" data-value="До 5 млн ₸">
         <div class="opt-icon">💵</div>
         <div class="opt-text">До 5 млн ₸</div>
@@ -636,17 +594,16 @@ src="https://www.facebook.com/tr?id=3165355223656540&ev=PageView&noscript=1"
         <div class="opt-check"></div>
       </div>
     </div>
-    <div class="btn-row">
-      <button class="btn-back" onclick="prevStep(4)">← Назад</button>
-      <button class="btn-next" id="btn-4" disabled onclick="nextStep(4)">Далее →</button>
+    <div class="btn-row btn-row-single">
+      <button class="btn-back" onclick="prevStep(3)">← Назад</button>
     </div>
   </div>
 
-  <!-- ВОПРОС 5 -->
-  <div class="card" id="step-5">
-    <div class="step-eyebrow">Вопрос 5 из 7</div>
+  <!-- ВОПРОС 4 — СРЕДНИЙ ЧЕК -->
+  <div class="card" id="step-4">
+    <div class="step-eyebrow">Вопрос 4 из 6</div>
     <h2>Какой у вас средний чек за заказ?</h2>
-    <div class="options" data-step="5">
+    <div class="options" data-step="4">
       <div class="option" data-value="300–500 тыс ₸">
         <div class="opt-icon">🏷️</div>
         <div class="opt-text">300–500 тыс ₸</div>
@@ -668,17 +625,16 @@ src="https://www.facebook.com/tr?id=3165355223656540&ev=PageView&noscript=1"
         <div class="opt-check"></div>
       </div>
     </div>
-    <div class="btn-row">
-      <button class="btn-back" onclick="prevStep(5)">← Назад</button>
-      <button class="btn-next" id="btn-5" disabled onclick="nextStep(5)">Далее →</button>
+    <div class="btn-row btn-row-single">
+      <button class="btn-back" onclick="prevStep(4)">← Назад</button>
     </div>
   </div>
 
-  <!-- ВОПРОС 6 -->
-  <div class="card" id="step-6">
-    <div class="step-eyebrow">Вопрос 6 из 7</div>
+  <!-- ВОПРОС 5 — БЮДЖЕТ -->
+  <div class="card" id="step-5">
+    <div class="step-eyebrow">Вопрос 5 из 6</div>
     <h2>Какой у вас примерный рекламный бюджет в месяц?</h2>
-    <div class="options" data-step="6">
+    <div class="options" data-step="5">
       <div class="option" data-value="До $200 в месяц">
         <div class="opt-icon">🌱</div>
         <div class="opt-text">До $200 в месяц</div>
@@ -700,17 +656,16 @@ src="https://www.facebook.com/tr?id=3165355223656540&ev=PageView&noscript=1"
         <div class="opt-check"></div>
       </div>
     </div>
-    <div class="btn-row">
-      <button class="btn-back" onclick="prevStep(6)">← Назад</button>
-      <button class="btn-next" id="btn-6" disabled onclick="nextStep(6)">Далее →</button>
+    <div class="btn-row btn-row-single">
+      <button class="btn-back" onclick="prevStep(5)">← Назад</button>
     </div>
   </div>
 
-  <!-- ВОПРОС 7 — ГОРОД -->
-  <div class="card" id="step-7">
-    <div class="step-eyebrow">Вопрос 7 из 7</div>
+  <!-- ВОПРОС 6 — ГОРОД -->
+  <div class="card" id="step-6">
+    <div class="step-eyebrow">Вопрос 6 из 6</div>
     <h2>В каком вы городе?</h2>
-    <div class="options" data-step="7">
+    <div class="options" data-step="6">
       <div class="option" data-value="Алматы">
         <div class="opt-icon">🏔️</div>
         <div class="opt-text">Алматы</div>
@@ -727,16 +682,15 @@ src="https://www.facebook.com/tr?id=3165355223656540&ev=PageView&noscript=1"
         <div class="opt-check"></div>
       </div>
     </div>
-    <div class="btn-row">
-      <button class="btn-back" onclick="prevStep(7)">← Назад</button>
-      <button class="btn-next" id="btn-7" disabled onclick="nextStep(7)">Далее →</button>
+    <div class="btn-row btn-row-single">
+      <button class="btn-back" onclick="prevStep(6)">← Назад</button>
     </div>
   </div>
 
   <!-- ФОРМА -->
   <div class="card" id="step-form">
     <div class="step-eyebrow">Почти готово!</div>
-    <h2>Оставьте свои контакты, чтобы мы с вами связались</h2>
+    <h2>Заполните контакты — и мы покажем вам результаты анализа прямо здесь</h2>
     <div class="form-group">
       <div>
         <label>Твоё имя</label>
@@ -772,7 +726,6 @@ src="https://www.facebook.com/tr?id=3165355223656540&ev=PageView&noscript=1"
         <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
       </div>
       <h2>Диагноз готов!</h2>
-      <p>Ваш диагноз готов! Если не хотите ждать, пока мы свяжемся — напишите нам в WhatsApp</p>
     </div>
     <div class="result-diagnosis">
       <span class="diag-label">Что происходит с твоей рекламой</span>
@@ -1012,18 +965,19 @@ src="https://www.facebook.com/tr?id=3165355223656540&ev=PageView&noscript=1"
   const CHAT_ID = '-5305827080';
   const WHATSAPP_NUMBER = '77066387416';
 
-  const answers = { q1: '', q2: '', q3: '', q4: '', q5: '', q6: '', q7: '' };
+  const answers = { q1: '', q2: '', q3: '', q4: '', q5: '', q6: '' };
   let currentStep = 1;
-  const TOTAL_STEPS = 7;
+  const TOTAL_STEPS = 6;
 
   document.querySelectorAll('.options').forEach(group => {
     group.querySelectorAll('.option').forEach(opt => {
       opt.addEventListener('click', () => {
+        if (opt.classList.contains('selected')) return;
         group.querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
         opt.classList.add('selected');
         const step = group.dataset.step;
         answers['q' + step] = opt.dataset.value;
-        document.getElementById('btn-' + step).disabled = false;
+        setTimeout(() => nextStep(Number(step)), 380);
       });
     });
   });
@@ -1118,17 +1072,16 @@ src="https://www.facebook.com/tr?id=3165355223656540&ev=PageView&noscript=1"
     const text = `
 🛋 *Новая заявка с диагностики*
 
-📍 *Город:* ${answers.q7 || '—'}
+📍 *Город:* ${answers.q6 || '—'}
 👤 *Имя:* ${name}
 📱 *Телефон:* ${phone}
 
 📋 *Ответы:*
 1. Реклама раньше: ${answers.q1 || '—'}
 2. Проблема: ${answers.q2 || '—'}
-3. Заказов в месяц: ${answers.q3 || '—'}
-4. Оборот: ${answers.q4 || '—'}
-5. Средний чек: ${answers.q5 || '—'}
-6. Бюджет: ${answers.q6 || '—'}
+3. Оборот: ${answers.q3 || '—'}
+4. Средний чек: ${answers.q4 || '—'}
+5. Бюджет: ${answers.q5 || '—'}
     `.trim();
 
     try {
@@ -1147,53 +1100,51 @@ src="https://www.facebook.com/tr?id=3165355223656540&ev=PageView&noscript=1"
   }
 
   function buildDiagnosis() {
-    const q1 = answers.q1, q2 = answers.q2, q3 = answers.q3, q4 = answers.q4, q5 = answers.q5, q6 = answers.q6;
-    let t = '';
+    const q1 = answers.q1, q2 = answers.q2, q3 = answers.q3, q5 = answers.q5;
+    let parts = [];
 
     if (q1.includes('результата почти не было')) {
-      t += 'Судя по ответам, <b>реклама запускалась без чёткой стратегии и понимания целевой аудитории</b> — из-за этого объявления показывались неплатёжеспособной или незаинтересованной аудитории. В связке с этим слабые креативы не отсеивали нецелевых людей, а только усугубляли ситуацию — отсюда и слабый результат. ';
+      parts.push('Реклама раньше запускалась без чёткой стратегии и понимания ЦА — отсюда и слабый результат.');
     } else if (q1.includes('первый раз')) {
-      t += 'Ты на правильном пути — <b>стартовать с грамотной стратегией сразу</b> намного дешевле, чем учиться на ошибках. ';
+      parts.push('Стартовать сразу с грамотной стратегией — намного дешевле, чем учиться на ошибках.');
     } else {
-      t += '<b>У тебя уже есть база</b> — реклама работает, но есть точки роста, которые позволят кратно увеличить поток клиентов. ';
+      parts.push('У вас уже есть база — реклама работает, но есть куда расти.');
     }
 
     if (q2.includes('Заявок мало')) {
-      t += 'Главная проблема — <b>связка аудитория + креатив</b>: объявление не цепляет нужных людей или показывается не тем. ';
+      parts.push('Главная проблема — слабая связка аудитория + креатив, из-за неё заявок мало.');
     } else if (q2.includes('неплатёжеспособные')) {
-      t += '<b>Трафик идёт, заявки падают, но клиенты не целевые</b>. Проблема в креативах — реклама показывается неплатёжеспособной аудитории или более дешёвому сегменту, для которого ваши услуги дороги. Нужно повысить качество креативов и найти новую, более платёжеспособную ЦА. ';
-    } else if (q2.includes('Таргетолог есть')) {
-      t += '<b>Таргетолог на месте, но результат не растёт</b> — скорее всего, проблема в стратегии, креативах или настройках аудиторий. Нужен внешний взгляд и аудит текущих кампаний. ';
+      parts.push('Трафик идёт, но креативы цепляют не тот сегмент — отсюда нецелевые заявки.');
     } else if (q2.includes('нестабильные')) {
-      t += 'Нестабильность "то густо, то пусто" почти всегда решается одним — <b>системным вложением в таргет</b>. Именно реклама сейчас должна быть в приоритете, а не контент или ведение инстаграма — эти вещи работают на узнаваемость, но не дают предсказуемый поток заявок, который нужен вам прямо сейчас. ';
-    } else if (q2.includes('Не знаю, где искать')) {
-      t += '<b>Без понимания каналов привлечения</b> бизнес зависит от сарафанного радио и случайности. Таргетированная реклама — это прямой и контролируемый канал, который даёт предсказуемый поток клиентов при правильной настройке. ';
+      parts.push('Нестабильность решается системным вложением в таргет, а не контентом или инстаграмом.');
     } else {
-      t += 'Для масштаба нужна <b>системная стратегия</b>, а не просто увеличение бюджета — иначе расходы вырастут, а заявки нет. ';
+      parts.push('Для масштаба нужна системная стратегия, а не просто больше бюджета.');
     }
 
-    const orders = q3, revenue = q4, avgCheck = q5;
-    if (orders.includes('До 10') || revenue.includes('До 5 млн')) {
-      t += 'Сейчас бизнес на стадии <b>активного роста</b> — главное не размывать бюджет, а сфокусироваться на одном-двух рабочих каналах. ';
-    } else if (orders.includes('10–30') || revenue.includes('5–10')) {
-      t += 'У вас <b>стабильная база</b>, но для выхода на новый уровень нужно усилить рекламную воронку и масштабировать то, что уже работает. ';
-    } else if (orders.includes('30–60') || revenue.includes('10–20')) {
-      t += 'Бизнес <b>уже масштабный</b> — сейчас важно оптимизировать рекламу, чтобы снизить стоимость заявки и увеличить маржинальность. ';
+    const revenue = q3;
+    if (revenue.includes('До 5 млн')) {
+      parts.push('На этом этапе важно не распылять бюджет, а сфокусироваться на 1-2 рабочих каналах.');
+    } else if (revenue.includes('5–10')) {
+      parts.push('У вас крепкая база — не хватает системности, а не бюджета.');
+    } else if (revenue.includes('10–20')) {
+      parts.push('Есть все условия для масштабирования — важно выстроить воронку, а не просто лить бюджет.');
+    } else if (revenue.includes('20–30')) {
+      parts.push('На этом уровне узкое место обычно не реклама, а скорость обработки заявок.');
     } else {
-      t += 'У вас <b>крупный бизнес с высоким оборотом</b> — здесь реклама должна работать как точный инструмент с чёткой аналитикой и масштабированием. ';
+      parts.push('Нужна полноценная система генерации заявок под масштаб вашего бизнеса.');
     }
 
-    if (q6.includes('До $200')) {
-      t += 'При бюджете до $200 важно <b>бить точечно</b> — чёткая сегментация ЦА решает всё.';
-    } else if (q6.includes('$200')) {
-      t += 'С бюджетом $200–500 уже можно выстроить <b>стабильный поток заявок</b> при правильной стратегии.';
-    } else if (q6.includes('$500')) {
-      t += 'С бюджетом $500+ у тебя отличные возможности для <b>масштабирования</b> — при грамотном подходе результат будет кратным.';
+    if (q5.includes('До $200')) {
+      parts.push('При таком бюджете решает точная сегментация ЦА.');
+    } else if (q5.includes('$200')) {
+      parts.push('Можно выстроить стабильный поток заявок при правильной стратегии.');
+    } else if (q5.includes('$500')) {
+      parts.push('Отличные возможности для масштабирования результата.');
     } else {
-      t += 'На консультации <b>рассчитаем бюджет</b> конкретно под твой бизнес и желаемый поток клиентов.';
+      parts.push('На созвоне поможем рассчитать бюджет под ваш бизнес.');
     }
 
-    return t;
+    return parts.join(' ');
   }
 
   function showResult() {
@@ -1204,14 +1155,13 @@ src="https://www.facebook.com/tr?id=3165355223656540&ev=PageView&noscript=1"
       document.getElementById('step-result').classList.add('active');
       document.getElementById('progressFill').style.width = '100%';
       document.getElementById('progressLabel').textContent = 'Готово!';
-      // Show dogrev section
+      // Показываем блок догрева ниже — без принудительного скролла,
+      // чтобы пользователь остался на карточке с диагнозом и кнопкой WhatsApp
       document.getElementById('dogrev').style.display = 'block';
-      // Scroll to dogrev
-      document.getElementById('dogrev').scrollIntoView({ behavior: 'smooth', block: 'start' });
     }, 350);
   }
 
-  function goToWhatsApp() {
+    function goToWhatsApp() {
     const message = encodeURIComponent('Здравствуйте! Хочу запустить таргет в мебельной нише');
     window.open('https://wa.me/' + WHATSAPP_NUMBER + '?text=' + message, '_blank');
   }
