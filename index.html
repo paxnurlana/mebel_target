@@ -218,6 +218,27 @@ src="https://www.facebook.com/tr?id=3165355223656540&ev=PageView&noscript=1"
   }
   .diag-text { font-size: 15px; color: #C9CEDA; line-height: 1.6; }
   .diag-text b { color: #fff; }
+  .result-insights { display: flex; flex-direction: column; gap: 11px; }
+  .result-insight {
+    padding-bottom: 11px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    font-size: 14px; line-height: 1.55;
+    color: #D7DBE4;
+  }
+  .result-insight:last-child { padding-bottom: 0; border-bottom: none; }
+  .result-summary {
+    margin-top: 16px;
+    padding: 17px 18px;
+    border: 1.5px solid #EBEBEB;
+    border-radius: 15px;
+    background: #FAFAFA;
+  }
+  .result-summary p {
+    font-size: 14px; line-height: 1.6;
+    color: #6B6D76;
+  }
+  .result-summary p + p { margin-top: 8px; }
+  .result-summary strong { color: #15151A; }
   .loading-card { text-align: center; padding: 60px 36px; }
   .spinner {
     width: 48px; height: 48px;
@@ -254,6 +275,150 @@ src="https://www.facebook.com/tr?id=3165355223656540&ev=PageView&noscript=1"
   }
   .btn-whatsapp:hover { transform: translateY(-2px); }
   .btn-whatsapp svg { width: 24px; height: 24px; fill: #fff; flex: none; }
+
+  .start-card {
+    padding: 38px 36px 34px;
+    overflow: hidden;
+  }
+  .start-card::before {
+    content: '';
+    position: absolute;
+    width: 220px; height: 220px;
+    border-radius: 50%;
+    right: -105px; top: -115px;
+    background: #FFF1EB;
+  }
+  .start-card h1 {
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 700; font-size: 25px;
+    line-height: 1.25; color: #15151A;
+    margin-bottom: 15px;
+    position: relative;
+  }
+  .start-card .start-lead {
+    font-size: 17px; font-weight: 600;
+    line-height: 1.5; color: #15151A;
+    margin-bottom: 10px;
+  }
+  .start-card .start-copy {
+    font-size: 14.5px; line-height: 1.6;
+    color: #6B6D76;
+  }
+  .start-benefits {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 8px; margin: 23px 0;
+  }
+  .start-benefit {
+    min-height: 76px;
+    padding: 12px 8px;
+    border: 1.5px solid #EBEBEB;
+    border-radius: 13px;
+    background: #FAFAFA;
+    text-align: center;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 5px;
+    font-size: 11.5px; line-height: 1.25;
+    color: #6B6D76;
+  }
+  .start-benefit b { font-size: 18px; line-height: 1; }
+  .start-card .btn-next { width: 100%; }
+  .start-micro {
+    margin-top: 13px;
+    text-align: center;
+    font-size: 12px; color: #9E9E9E;
+  }
+  .warmup-card h2 { margin-bottom: 16px; }
+  .warmup-lead {
+    font-size: 17px; font-weight: 700;
+    line-height: 1.5; color: #15151A;
+    margin-bottom: 12px;
+  }
+  .warmup-copy {
+    font-size: 15px; line-height: 1.65;
+    color: #4A4C56;
+  }
+  .warmup-copy p + p { margin-top: 11px; }
+  .warmup-copy strong { color: #15151A; }
+  .warmup-note {
+    margin-top: 20px;
+    padding: 15px 17px;
+    border: 1.5px solid #FFD9C4;
+    border-radius: 14px;
+    background: #FFF3EE;
+    color: #6F371E;
+    font-size: 14px; line-height: 1.55;
+  }
+  .slots-card {
+    margin-top: 20px;
+    padding: 18px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #E53935, #C62828);
+    color: #fff;
+    box-shadow: 0 12px 28px -16px rgba(198,40,40,0.75);
+  }
+  .slots-label {
+    font-size: 11.5px; font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: #FFD8D6; margin-bottom: 8px;
+  }
+  .slots-title {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 16px; line-height: 1.4;
+    margin-bottom: 13px;
+  }
+  .slots-progress {
+    display: grid; grid-template-columns: repeat(5, 1fr);
+    gap: 6px; margin-bottom: 11px;
+  }
+  .slots-progress span {
+    height: 7px; border-radius: 99px;
+    background: rgba(255,255,255,0.28);
+  }
+  .slots-progress span.filled { background: #fff; }
+  .slots-status {
+    font-size: 13.5px; line-height: 1.45;
+    color: #FFEAE9;
+  }
+  .slots-status strong { color: #fff; }
+  .gift-list {
+    display: flex; flex-direction: column;
+    gap: 12px; margin-top: 20px;
+  }
+  .gift-item {
+    padding: 18px;
+    border: 1.5px solid #EBEBEB;
+    border-radius: 16px;
+    background: #FAFAFA;
+  }
+  .gift-head {
+    display: flex; align-items: center;
+    gap: 11px; margin-bottom: 8px;
+  }
+  .gift-small-icon {
+    width: 40px; height: 40px;
+    flex: none; border-radius: 11px;
+    display: flex; align-items: center; justify-content: center;
+    background: #FFF3EE; font-size: 21px;
+  }
+  .gift-item h3 {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 14.5px; line-height: 1.35;
+    color: #15151A;
+  }
+  .gift-item p {
+    font-size: 14px; line-height: 1.6;
+    color: #6B6D76;
+  }
+  .gift-total {
+    margin-top: 14px;
+    padding: 16px 17px;
+    border-radius: 14px;
+    background: #181C26;
+    color: #E1E5ED;
+    font-size: 14px; line-height: 1.55;
+  }
+  .gift-total strong { color: #B6FF3C; }
 
   .dogrev-wrap { width: 100%; max-width: 640px; margin: 0 auto; padding: 0 0 60px; }
   a[x-apple-data-detectors] {
@@ -481,6 +646,9 @@ src="https://www.facebook.com/tr?id=3165355223656540&ev=PageView&noscript=1"
     .btn-back { width: 100%; order: 2; }
     .btn-next { width: 100%; order: 1; }
     .btn-whatsapp { font-size: 16px; padding: 20px 14px; }
+    .start-card { padding: 30px 22px 27px; }
+    .start-card h1 { font-size: 21px; }
+    .start-benefit { min-height: 72px; padding: 10px 5px; font-size: 10.5px; }
     .dogrev-card { padding: 26px 20px; }
     .dogrev-card h2 { font-size: 20px; }
     .case-title { font-size: 22px; }
@@ -498,7 +666,7 @@ src="https://www.facebook.com/tr?id=3165355223656540&ev=PageView&noscript=1"
 <body>
 
 <div class="topbar">
-  <div class="progress-wrap">
+  <div class="progress-wrap" id="progressWrap" style="visibility:hidden;">
     <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
     <div class="progress-label" id="progressLabel">Шаг 1 / 7</div>
   </div>
@@ -506,24 +674,39 @@ src="https://www.facebook.com/tr?id=3165355223656540&ev=PageView&noscript=1"
 
 <div class="card-wrap" id="cardWrap">
 
+  <!-- СТАРТОВЫЙ ЭКРАН -->
+  <div class="card start-card active" id="step-start">
+    <div class="step-eyebrow">Отбор мебельных производств</div>
+    <h1>Таргет для мебельных производств</h1>
+    <p class="start-lead">Загрузим ваше производство заказами на 3 месяца вперёд.</p>
+    <p class="start-copy">Ответьте на несколько вопросов — мы оценим вашу ситуацию и покажем предварительный разбор.</p>
+    <div class="start-benefits">
+      <div class="start-benefit"><b>⏱️</b><span>около<br>2 минут</span></div>
+      <div class="start-benefit"><b>📊</b><span>персональный<br>разбор</span></div>
+      <div class="start-benefit"><b>🤝</b><span>честная<br>оценка</span></div>
+    </div>
+    <button class="btn-next" onclick="startQuiz()">Пройти отбор →</button>
+    <div class="start-micro">Без обязательств и навязчивых звонков</div>
+  </div>
+
   <!-- ВОПРОС 1 -->
-  <div class="card active" id="step-1">
-    <div class="step-eyebrow">Вопрос 1 из 6</div>
+  <div class="card" id="step-1">
+    <div class="step-eyebrow">Вопрос 1 из 8</div>
     <h2>Запускали ли вы рекламу для мебельного бизнеса раньше?</h2>
     <div class="options" data-step="1">
-      <div class="option" data-value="Запускал, но результата почти не было">
+      <div class="option" data-value="Запускал, но заявок или продаж почти не было">
         <div class="opt-icon">😔</div>
-        <div class="opt-text">Запускал, но результата почти не было</div>
+        <div class="opt-text">Запускал, но заявок или продаж почти не было</div>
         <div class="opt-check"></div>
       </div>
-      <div class="option" data-value="Запускал, есть результат — хочу больше">
+      <div class="option" data-value="Запускаю сейчас, реклама приносит результат — хочу увеличить объём">
         <div class="opt-icon">📈</div>
-        <div class="opt-text">Запускал, есть результат — хочу больше</div>
+        <div class="opt-text">Запускаю сейчас, реклама приносит результат — хочу увеличить объём</div>
         <div class="opt-check"></div>
       </div>
-      <div class="option" data-value="Нет — это первый раз">
+      <div class="option" data-value="Нет, рекламу ещё не запускал">
         <div class="opt-icon">🚀</div>
-        <div class="opt-text">Нет, это будет первый раз</div>
+        <div class="opt-text">Нет, рекламу ещё не запускал</div>
         <div class="opt-check"></div>
       </div>
     </div>
@@ -534,27 +717,27 @@ src="https://www.facebook.com/tr?id=3165355223656540&ev=PageView&noscript=1"
 
   <!-- ВОПРОС 2 -->
   <div class="card" id="step-2">
-    <div class="step-eyebrow">Вопрос 2 из 6</div>
-    <h2>Какая главная проблема с рекламой прямо сейчас?</h2>
+    <div class="step-eyebrow">Вопрос 2 из 8</div>
+    <h2>Какая главная проблема с привлечением клиентов сейчас?</h2>
     <div class="options" data-step="2">
-      <div class="option" data-value="Заявок мало, реклама работает плохо">
+      <div class="option" data-value="Заявок мало — производство загружено не полностью">
         <div class="opt-icon">📭</div>
-        <div class="opt-text">Заявок мало, реклама работает плохо</div>
+        <div class="opt-text">Заявок мало — производство загружено не полностью</div>
         <div class="opt-check"></div>
       </div>
-      <div class="option" data-value="Заявки есть, но приходят неплатёжеспособные, проблемные клиенты">
+      <div class="option" data-value="Заявки приходят, но много неплатёжеспособных клиентов">
         <div class="opt-icon">😠</div>
-        <div class="opt-text">Заявки есть, но приходят неплатёжеспособные, проблемные клиенты</div>
+        <div class="opt-text">Заявки приходят, но много неплатёжеспособных клиентов</div>
         <div class="opt-check"></div>
       </div>
-      <div class="option" data-value="Продажи нестабильные — то густо, то пусто">
+      <div class="option" data-value="Заказы есть, но поток нестабильный — то густо, то пусто">
         <div class="opt-icon">📉</div>
-        <div class="opt-text">Продажи нестабильные — то густо, то пусто</div>
+        <div class="opt-text">Заказы есть, но поток нестабильный — то густо, то пусто</div>
         <div class="opt-check"></div>
       </div>
-      <div class="option" data-value="Хочу масштабироваться, но не знаю как">
+      <div class="option" data-value="Реклама уже работает, но хочу получать больше заказов">
         <div class="opt-icon">🔥</div>
-        <div class="opt-text">Хочу масштабироваться, но не знаю как</div>
+        <div class="opt-text">Реклама уже работает, но хочу получать больше заказов</div>
         <div class="opt-check"></div>
       </div>
     </div>
@@ -563,9 +746,20 @@ src="https://www.facebook.com/tr?id=3165355223656540&ev=PageView&noscript=1"
     </div>
   </div>
 
+  <!-- ДОГРЕВ 1 — ПОСЛЕ ВОПРОСОВ О РЕКЛАМЕ -->
+  <div class="card warmup-card" id="step-warm1">
+    <div class="step-eyebrow">Короткий разбор</div>
+    <h2 id="warm1-title">Что это значит для вашей рекламы</h2>
+    <div class="warmup-copy" id="warm1-copy"></div>
+    <div class="btn-row">
+      <button class="btn-back" onclick="prevStep('warm1')">← Назад</button>
+      <button class="btn-next" onclick="nextStep('warm1')">Продолжить →</button>
+    </div>
+  </div>
+
   <!-- ВОПРОС 3 — ОБОРОТ -->
   <div class="card" id="step-3">
-    <div class="step-eyebrow">Вопрос 3 из 6</div>
+    <div class="step-eyebrow">Вопрос 3 из 8</div>
     <h2>Какой у вас примерный оборот в месяц (общая выручка, до вычета расходов)?</h2>
     <div class="options" data-step="3">
       <div class="option" data-value="До 5 млн ₸">
@@ -601,7 +795,7 @@ src="https://www.facebook.com/tr?id=3165355223656540&ev=PageView&noscript=1"
 
   <!-- ВОПРОС 4 — СРЕДНИЙ ЧЕК -->
   <div class="card" id="step-4">
-    <div class="step-eyebrow">Вопрос 4 из 6</div>
+    <div class="step-eyebrow">Вопрос 4 из 8</div>
     <h2>Какой у вас средний чек за заказ?</h2>
     <div class="options" data-step="4">
       <div class="option" data-value="300–500 тыс ₸">
@@ -630,11 +824,73 @@ src="https://www.facebook.com/tr?id=3165355223656540&ev=PageView&noscript=1"
     </div>
   </div>
 
-  <!-- ВОПРОС 5 — БЮДЖЕТ -->
+  <!-- ДОГРЕВ 2 — ЧТО ВХОДИТ В РАБОТУ -->
+  <div class="card warmup-card" id="step-warm2">
+    <div class="step-eyebrow">Если пройдёте отбор</div>
+    <h2>🎁 Что вы получите</h2>
+    <div class="gift-list">
+      <div class="gift-item">
+        <div class="gift-head"><div class="gift-small-icon">🎥</div><h3>Креативы под ключ — бесплатно</h3></div>
+        <p>Наш мобилограф приедет к вам в цех и снимет фото и видео специально для рекламы. Вам не нужно думать, что снимать — мы всё организуем сами.</p>
+      </div>
+      <div class="gift-item">
+        <div class="gift-head"><div class="gift-small-icon">🌐</div><h3>Сайт-воронка — бесплатно</h3></div>
+        <p>Создадим сайт-воронку по типу этой страницы. Он познакомит клиента с вашей компанией, прогреет его ещё до переписки и передаст менеджеру уже более горячего, готового к диалогу клиента.</p>
+      </div>
+      <div class="gift-item">
+        <div class="gift-head"><div class="gift-small-icon">💬</div><h3>Скрипт продаж — бесплатно</h3></div>
+        <p>Подготовим готовый сценарий переписки для WhatsApp. Менеджеру останется следовать ему и закрывать больше заявок.</p>
+      </div>
+    </div>
+    <div class="gift-total"><strong>Общая стоимость — более 300 000 ₸.</strong><br>Если поймём, что сможем дать хороший результат — сделаем всё это бесплатно.</div>
+    <div class="btn-row">
+      <button class="btn-back" onclick="prevStep('warm2')">← Назад</button>
+      <button class="btn-next" onclick="nextStep('warm2')">Продолжить →</button>
+    </div>
+  </div>
+
+  <!-- ВОПРОС 5 — INSTAGRAM -->
   <div class="card" id="step-5">
-    <div class="step-eyebrow">Вопрос 5 из 6</div>
-    <h2>Какой у вас примерный рекламный бюджет в месяц?</h2>
+    <div class="step-eyebrow">Вопрос 5 из 8</div>
+    <h2>Есть ли у вас Instagram?</h2>
     <div class="options" data-step="5">
+      <div class="option" data-value="Нет вообще">
+        <div class="opt-icon">🚫</div>
+        <div class="opt-text">Нет вообще</div>
+        <div class="opt-check"></div>
+      </div>
+      <div class="option" data-value="Есть, но почти не веду">
+        <div class="opt-icon">📱</div>
+        <div class="opt-text">Есть, но почти не веду</div>
+        <div class="opt-check"></div>
+      </div>
+      <div class="option" data-value="Есть, всё хорошо с контентом">
+        <div class="opt-icon">✅</div>
+        <div class="opt-text">Есть, всё хорошо с контентом</div>
+        <div class="opt-check"></div>
+      </div>
+    </div>
+    <div class="btn-row btn-row-single">
+      <button class="btn-back" onclick="prevStep(5)">← Назад</button>
+    </div>
+  </div>
+
+  <!-- ДОГРЕВ 3 — ПОСЛЕ INSTAGRAM -->
+  <div class="card warmup-card" id="step-warm3">
+    <div class="step-eyebrow">Учтём при запуске</div>
+    <h2 id="warm3-title">Instagram — не главное</h2>
+    <div class="warmup-copy" id="warm3-copy"></div>
+    <div class="btn-row">
+      <button class="btn-back" onclick="prevStep('warm3')">← Назад</button>
+      <button class="btn-next" onclick="nextStep('warm3')">Продолжить →</button>
+    </div>
+  </div>
+
+  <!-- ВОПРОС 6 — БЮДЖЕТ -->
+  <div class="card" id="step-6">
+    <div class="step-eyebrow">Вопрос 6 из 8</div>
+    <h2>Какой у вас примерный рекламный бюджет в месяц?</h2>
+    <div class="options" data-step="6">
       <div class="option" data-value="До $200 в месяц">
         <div class="opt-icon">🌱</div>
         <div class="opt-text">До $200 в месяц</div>
@@ -657,15 +913,46 @@ src="https://www.facebook.com/tr?id=3165355223656540&ev=PageView&noscript=1"
       </div>
     </div>
     <div class="btn-row btn-row-single">
-      <button class="btn-back" onclick="prevStep(5)">← Назад</button>
+      <button class="btn-back" onclick="prevStep(6)">← Назад</button>
     </div>
   </div>
 
-  <!-- ВОПРОС 6 — ГОРОД -->
-  <div class="card" id="step-6">
-    <div class="step-eyebrow">Вопрос 6 из 6</div>
+  <!-- ВОПРОС 7 — ГОТОВНОСТЬ К СТАРТУ -->
+  <div class="card" id="step-7">
+    <div class="step-eyebrow">Вопрос 7 из 8</div>
+    <h2>Когда готовы начать работу?</h2>
+    <div class="options" data-step="7">
+      <div class="option" data-value="В ближайшие дни">
+        <div class="opt-icon">🔥</div>
+        <div class="opt-text">В ближайшие дни</div>
+        <div class="opt-check"></div>
+      </div>
+      <div class="option" data-value="В течение недели">
+        <div class="opt-icon">📅</div>
+        <div class="opt-text">В течение недели</div>
+        <div class="opt-check"></div>
+      </div>
+      <div class="option" data-value="В течение месяца">
+        <div class="opt-icon">🗓️</div>
+        <div class="opt-text">В течение месяца</div>
+        <div class="opt-check"></div>
+      </div>
+      <div class="option" data-value="Пока изучаю варианты">
+        <div class="opt-icon">🔎</div>
+        <div class="opt-text">Пока изучаю варианты</div>
+        <div class="opt-check"></div>
+      </div>
+    </div>
+    <div class="btn-row btn-row-single">
+      <button class="btn-back" onclick="prevStep(7)">← Назад</button>
+    </div>
+  </div>
+
+  <!-- ВОПРОС 8 — ГОРОД -->
+  <div class="card" id="step-8">
+    <div class="step-eyebrow">Вопрос 8 из 8</div>
     <h2>В каком вы городе?</h2>
-    <div class="options" data-step="6">
+    <div class="options" data-step="8">
       <div class="option" data-value="Алматы">
         <div class="opt-icon">🏔️</div>
         <div class="opt-text">Алматы</div>
@@ -683,7 +970,33 @@ src="https://www.facebook.com/tr?id=3165355223656540&ev=PageView&noscript=1"
       </div>
     </div>
     <div class="btn-row btn-row-single">
-      <button class="btn-back" onclick="prevStep(6)">← Назад</button>
+      <button class="btn-back" onclick="prevStep(8)">← Назад</button>
+    </div>
+  </div>
+
+  <!-- ДОГРЕВ 4 — ПОСЛЕ ГОРОДА, ПЕРЕД КОНТАКТАМИ -->
+  <div class="card warmup-card" id="step-warm4">
+    <div class="step-eyebrow">Честный подход</div>
+    <h2>Мы не берём в работу все мебельные компании</h2>
+    <div class="warmup-copy">
+      <p>Перед запуском мы оцениваем ваш бизнес и смотрим, сможем ли действительно дать хороший результат.</p>
+      <p>Если поймём, что сейчас реклама вам не поможет — честно скажем об этом.</p>
+    </div>
+    <div class="slots-card">
+      <div class="slots-label">Набор на август</div>
+      <div class="slots-title">Отберём только 5 мебельных компаний</div>
+      <div class="slots-progress" aria-label="Занято 2 места из 5">
+        <span class="filled"></span>
+        <span class="filled"></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="slots-status">Уже отобрали <strong>2 компании</strong> — осталось <strong>3 места</strong>.</div>
+    </div>
+    <div class="btn-row">
+      <button class="btn-back" onclick="prevStep('warm4')">← Назад</button>
+      <button class="btn-next" onclick="nextStep('warm4')">Продолжить →</button>
     </div>
   </div>
 
@@ -725,15 +1038,18 @@ src="https://www.facebook.com/tr?id=3165355223656540&ev=PageView&noscript=1"
       <div class="result-done-icon">
         <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
       </div>
-      <h2>Диагноз готов!</h2>
+      <h2>Предварительный разбор готов</h2>
     </div>
     <div class="result-diagnosis">
-      <span class="diag-label">Что происходит с твоей рекламой</span>
-      <div class="diag-text" id="diag-text">—</div>
+      <div class="diag-text result-insights" id="diag-text">—</div>
+    </div>
+    <div class="result-summary">
+      <p><strong>Предварительно ваша компания подходит для работы с нами.</strong></p>
+      <p>Напишите в WhatsApp — обсудим условия, разберём детали и договоримся о запуске.</p>
     </div>
     <button class="btn-whatsapp" onclick="goToWhatsApp(); fbq('track', 'Contact');">
       <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      Связаться с нами по WhatsApp
+      Обсудить условия в WhatsApp →
     </button>
   </div>
 
@@ -753,7 +1069,7 @@ src="https://www.facebook.com/tr?id=3165355223656540&ev=PageView&noscript=1"
   <!-- КЕЙС -->
   <div class="dogrev-card case-card">
     <div class="dogrev-eyebrow">⭐ Реальный кейс</div>
-    <h2 class="case-title">Как мы сделали продаж на 30 000 000 ₸ за 3 недели</h2>
+    <h2 class="case-title">Как мы сделали 30 000 000 ₸ выручки за 2 недели</h2>
     <p class="case-quote">
       Клиент пришёл к нам с «нулём» — <b>1-2 клиента в месяц</b>, и то по сарафанке. Instagram не упакован, заявок с рекламы <b>не было вообще</b>.
     </p>
@@ -763,7 +1079,7 @@ src="https://www.facebook.com/tr?id=3165355223656540&ev=PageView&noscript=1"
 
     <div class="stat-hero">
       <span class="num">30 000 000 ₸</span>
-      <span class="lbl">выручка за 3 недели</span>
+      <span class="lbl">выручка за 2 недели</span>
     </div>
     <div class="stat-row">
       <div class="stat-box">
@@ -965,9 +1281,11 @@ src="https://www.facebook.com/tr?id=3165355223656540&ev=PageView&noscript=1"
   const CHAT_ID = '-5305827080';
   const WHATSAPP_NUMBER = '77066387416';
 
-  const answers = { q1: '', q2: '', q3: '', q4: '', q5: '', q6: '' };
+  const answers = { q1: '', q2: '', q3: '', q4: '', q5: '', q6: '', q7: '', q8: '' };
   let currentStep = 1;
-  const TOTAL_STEPS = 6;
+  const TOTAL_STEPS = 8;
+  const QUIZ_ROUTE = ['1', '2', 'warm1', '3', '4', 'warm2', '5', 'warm3', '6', '7', '8', 'warm4', 'form'];
+  const WARMUP_PROGRESS = { warm1: 2, warm2: 4, warm3: 5, warm4: 8 };
 
   document.querySelectorAll('.options').forEach(group => {
     group.querySelectorAll('.option').forEach(opt => {
@@ -982,48 +1300,92 @@ src="https://www.facebook.com/tr?id=3165355223656540&ev=PageView&noscript=1"
     });
   });
 
+  function startQuiz() {
+    const startEl = document.getElementById('step-start');
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    startEl.classList.add('exit');
+    document.getElementById('progressWrap').style.visibility = 'visible';
+    setTimeout(() => {
+      startEl.classList.remove('active', 'exit');
+      document.getElementById('step-1').classList.add('active');
+      updateProgress(1, TOTAL_STEPS);
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    }, 350);
+  }
+
   function updateProgress(step, total) {
     const pct = Math.round((step / total) * 100);
     document.getElementById('progressFill').style.width = pct + '%';
     document.getElementById('progressLabel').textContent =
-      step <= total ? 'Шаг ' + step + ' / ' + total : 'Готово!';
+      step <= total ? 'Вопрос ' + step + ' / ' + total : 'Готово!';
+  }
+
+  function prepareWarmup(stepKey) {
+    if (stepKey === 'warm1') {
+      const title = document.getElementById('warm1-title');
+      const copy = document.getElementById('warm1-copy');
+      if (answers.q1.includes('ещё не запускал')) {
+        title.textContent = 'Это не проблема.';
+        copy.innerHTML = '<p>Мы уже запускали мебельные производства с нуля и помогали им выйти на <strong>30 000 000 ₸ выручки за 2 недели.</strong></p><p>Главное — чтобы у вас был хороший продукт. Всё остальное мы возьмём на себя.</p>';
+      } else if (answers.q2.includes('Реклама уже работает')) {
+        title.textContent = 'Это даже лучше.';
+        copy.innerHTML = '<p>Обычный таргетолог просто запускает рекламу.</p><p><strong>Мы работаем как маркетологи.</strong></p><p>Мы смотрим, что уже работает, находим точки роста, снимаем новые креативы, делаем сайт-воронку и помогаем со скриптами продаж.</p><p>В итоге вы получаете <strong>не просто больше заявок, а больше клиентов с высоким средним чеком.</strong></p>';
+      } else {
+        title.textContent = 'Такое бывает очень часто.';
+        copy.innerHTML = '<p>Обычно проблема не в рекламе, а в слабых креативах, неправильной настройке или плохой воронке.</p><p>Поэтому мы работаем не только с рекламой, а строим всю систему привлечения клиентов.</p>';
+      }
+    }
+
+    if (stepKey === 'warm3') {
+      const title = document.getElementById('warm3-title');
+      const copy = document.getElementById('warm3-copy');
+      if (answers.q5 === 'Нет вообще') {
+        title.textContent = 'Это не проблема.';
+        copy.innerHTML = '<p>Мы регулярно запускаем мебельные производства даже без Instagram.</p>';
+      } else if (answers.q5.includes('почти не веду')) {
+        title.textContent = 'Это нормально.';
+        copy.innerHTML = '<p>Для рекламы мы всё равно снимаем новые фото и видео, поэтому старый контент нам не нужен.</p>';
+      } else {
+        title.textContent = 'Отлично.';
+        copy.innerHTML = '<p>Значит, сможем быстрее запустить рекламу и протестировать больше рабочих связок.</p>';
+      }
+    }
+  }
+
+  function showQuizCard(fromKey, toKey) {
+    const fromEl = document.getElementById('step-' + fromKey);
+    const toEl = document.getElementById('step-' + toKey);
+    if (!fromEl || !toEl) return;
+
+    prepareWarmup(toKey);
+    const progressStep = /^\d+$/.test(toKey) ? Number(toKey) : WARMUP_PROGRESS[toKey];
+    if (progressStep) updateProgress(progressStep, TOTAL_STEPS);
+
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    fromEl.classList.add('exit');
+    setTimeout(() => {
+      fromEl.classList.remove('active', 'exit');
+      toEl.classList.add('active');
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    }, 350);
   }
 
   function nextStep(from) {
-    const fromEl = document.getElementById('step-' + from);
-    let toId = from < TOTAL_STEPS ? 'step-' + (from + 1) : 'step-form';
-    if (from < TOTAL_STEPS) {
-      currentStep = from + 1;
-      updateProgress(currentStep, TOTAL_STEPS);
-    } else {
-      currentStep = 'form';
-    }
-    fromEl.classList.add('exit');
-    setTimeout(() => {
-      fromEl.classList.remove('active', 'exit');
-      document.getElementById(toId).classList.add('active');
-    }, 350);
+    const fromKey = String(from);
+    const routeIndex = QUIZ_ROUTE.indexOf(fromKey);
+    if (routeIndex < 0 || routeIndex >= QUIZ_ROUTE.length - 1) return;
+    const toKey = QUIZ_ROUTE[routeIndex + 1];
+    currentStep = /^\d+$/.test(toKey) ? Number(toKey) : toKey;
+    showQuizCard(fromKey, toKey);
   }
 
   function prevStep(from) {
-    let toId;
-    if (from === 'form') {
-      toId = 'step-' + TOTAL_STEPS;
-      currentStep = TOTAL_STEPS;
-      updateProgress(TOTAL_STEPS, TOTAL_STEPS);
-    } else if (from === 1) {
-      return;
-    } else {
-      toId = 'step-' + (from - 1);
-      currentStep = from - 1;
-      updateProgress(currentStep, TOTAL_STEPS);
-    }
-    const fromEl = document.getElementById('step-' + from);
-    fromEl.classList.add('exit');
-    setTimeout(() => {
-      fromEl.classList.remove('active', 'exit');
-      document.getElementById(toId).classList.add('active');
-    }, 350);
+    const fromKey = String(from);
+    const routeIndex = QUIZ_ROUTE.indexOf(fromKey);
+    if (routeIndex <= 0) return;
+    const toKey = QUIZ_ROUTE[routeIndex - 1];
+    currentStep = /^\d+$/.test(toKey) ? Number(toKey) : toKey;
+    showQuizCard(fromKey, toKey);
   }
 
   async function submitForm() {
@@ -1072,7 +1434,7 @@ src="https://www.facebook.com/tr?id=3165355223656540&ev=PageView&noscript=1"
     const text = `
 🛋 *Новая заявка с диагностики*
 
-📍 *Город:* ${answers.q6 || '—'}
+📍 *Город:* ${answers.q8 || '—'}
 👤 *Имя:* ${name}
 📱 *Телефон:* ${phone}
 
@@ -1081,7 +1443,9 @@ src="https://www.facebook.com/tr?id=3165355223656540&ev=PageView&noscript=1"
 2. Проблема: ${answers.q2 || '—'}
 3. Оборот: ${answers.q3 || '—'}
 4. Средний чек: ${answers.q4 || '—'}
-5. Бюджет: ${answers.q5 || '—'}
+5. Instagram: ${answers.q5 || '—'}
+6. Бюджет: ${answers.q6 || '—'}
+7. Готовность к старту: ${answers.q7 || '—'}
     `.trim();
 
     try {
@@ -1100,51 +1464,40 @@ src="https://www.facebook.com/tr?id=3165355223656540&ev=PageView&noscript=1"
   }
 
   function buildDiagnosis() {
-    const q1 = answers.q1, q2 = answers.q2, q3 = answers.q3, q5 = answers.q5;
-    let parts = [];
+    const parts = [];
 
-    if (q1.includes('результата почти не было')) {
-      parts.push('Реклама раньше запускалась без чёткой стратегии и понимания ЦА — отсюда и слабый результат.');
-    } else if (q1.includes('первый раз')) {
-      parts.push('Стартовать сразу с грамотной стратегией — намного дешевле, чем учиться на ошибках.');
+    if (answers.q1.includes('почти не было')) {
+      parts.push('Реклама уже запускалась, но не дала нужного результата. Скорее всего, точка роста находится в креативах, настройке рекламы или воронке.');
+    } else if (answers.q1.includes('приносит результат')) {
+      parts.push('У вас уже есть рабочая реклама. Главная задача — увеличить количество заявок, не потеряв их качество.');
     } else {
-      parts.push('У вас уже есть база — реклама работает, но есть куда расти.');
+      parts.push('Реклама ещё не запускалась. Это не проблема: мы уже запускали мебельные компании с нуля и получали 30 000 000 ₸ выручки за 2 недели.');
     }
 
-    if (q2.includes('Заявок мало')) {
-      parts.push('Главная проблема — слабая связка аудитория + креатив, из-за неё заявок мало.');
-    } else if (q2.includes('неплатёжеспособные')) {
-      parts.push('Трафик идёт, но креативы цепляют не тот сегмент — отсюда нецелевые заявки.');
-    } else if (q2.includes('нестабильные')) {
-      parts.push('Нестабильность решается системным вложением в таргет, а не контентом или инстаграмом.');
+    if (answers.q2.includes('Заявок мало')) {
+      parts.push('Основная задача — создать стабильный поток заявок и обеспечить компанию заказами.');
+    } else if (answers.q2.includes('неплатёжеспособных')) {
+      parts.push('Основная задача — улучшить качество заявок и привлекать более платёжеспособных клиентов.');
+    } else if (answers.q2.includes('нестабильный')) {
+      parts.push('Основная задача — сделать поток заказов более стабильным и предсказуемым.');
     } else {
-      parts.push('Для масштаба нужна системная стратегия, а не просто больше бюджета.');
+      parts.push('Основная задача — найти новые рекламные связки и масштабировать то, что уже работает.');
     }
 
-    const revenue = q3;
-    if (revenue.includes('До 5 млн')) {
-      parts.push('На этом этапе важно не распылять бюджет, а сфокусироваться на 1-2 рабочих каналах.');
-    } else if (revenue.includes('5–10')) {
-      parts.push('У вас крепкая база — не хватает системности, а не бюджета.');
-    } else if (revenue.includes('10–20')) {
-      parts.push('Есть все условия для масштабирования — важно выстроить воронку, а не просто лить бюджет.');
-    } else if (revenue.includes('20–30')) {
-      parts.push('На этом уровне узкое место обычно не реклама, а скорость обработки заявок.');
+    const readySoon = answers.q7 === 'В ближайшие дни' || answers.q7 === 'В течение недели';
+    if (readySoon && answers.q6.includes('До $200')) {
+      parts.push('Вы готовы к скорому старту. При выбранном бюджете лучше начать с нескольких точных гипотез и масштабировать те, которые покажут результат.');
+    } else if (readySoon && answers.q6.includes('не определился')) {
+      parts.push('Вы готовы к скорому старту. Перед запуском нужно рассчитать подходящий рекламный бюджет и определить первые гипотезы для теста.');
+    } else if (readySoon) {
+      parts.push('Вы готовы к скорому старту. Выбранный бюджет позволяет перейти к тестированию рекламных связок после короткой подготовки.');
     } else {
-      parts.push('Нужна полноценная система генерации заявок под масштаб вашего бизнеса.');
+      parts.push('Вы пока планируете запуск. На следующем шаге можно без спешки определить стратегию, бюджет и подходящий момент для старта.');
     }
 
-    if (q5.includes('До $200')) {
-      parts.push('При таком бюджете решает точная сегментация ЦА.');
-    } else if (q5.includes('$200')) {
-      parts.push('Можно выстроить стабильный поток заявок при правильной стратегии.');
-    } else if (q5.includes('$500')) {
-      parts.push('Отличные возможности для масштабирования результата.');
-    } else {
-      parts.push('На созвоне поможем рассчитать бюджет под ваш бизнес.');
-    }
-
-    return parts.join(' ');
+    return parts.slice(0, 3).map(text =>
+      '<div class="result-insight">' + text + '</div>'
+    ).join('');
   }
 
   function showResult() {
@@ -1155,8 +1508,7 @@ src="https://www.facebook.com/tr?id=3165355223656540&ev=PageView&noscript=1"
       document.getElementById('step-result').classList.add('active');
       document.getElementById('progressFill').style.width = '100%';
       document.getElementById('progressLabel').textContent = 'Готово!';
-      // Показываем блок догрева ниже — без принудительного скролла,
-      // чтобы пользователь остался на карточке с диагнозом и кнопкой WhatsApp
+      // Показываем дополнительный блок ниже без принудительного скролла.
       document.getElementById('dogrev').style.display = 'block';
     }, 350);
   }
